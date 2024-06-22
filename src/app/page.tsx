@@ -1,113 +1,49 @@
+import Post from "@/components/post";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+   <div className="w-full  flex justify-center items-center bg-center h-96 no-repeat bg-cover bg-[url('https://images.pexels.com/photos/754595/pexels-photo-754595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]">
+      <div className="w-[1000px] z-40 text-center"> 
+          <h2 className="text-white text-7xl font-bold">
+            Blog de viagens
+          </h2>
         </div>
+   </div>
+   <div className="w-full flex justify-center items-center bg-slate-100 py-4">
+      <div className="w-[100%] z-40 flex flex-col gap-2"> 
+        <div className="grid gap-2 grid-flow-col">
+          <Post className="col-span-8" urli='https://images.pexels.com/photos/3455931/pexels-photo-3455931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' titulo="la sierra de Chihuahua" texto="
+            Cada vez que llego a Chihuahua en donde la gran Sierra Madre Occidental me recibe y se impone con su belleza desde el vuelo, me adentro con la imaginación en sus enormes montañas y me pregunto.
+            ¿En qué condiciones vivirán los Tarahumaras? y ¿Cómo están organizados para combatir el paso del tiempo, las inclemencias y las épocas de sequía?
+            Ahí, entre esos hermosos accidentes geográficos y barrancas, habita una etnia que ha subsistido a los cambios de México, los tarahumaras quienes se autodenominan rarámuris...
+          "/>
+          {/* <Post className="col-span-4" urli='https://www.columbusecuador.com/wp-content/uploads/2021/08/quilotoa3-scaled.jpg' titulo="COTOPAXI NATIONAL PARK & QUILOTOA LOOP TOUR" texto="
+          Alexander von Humboldt, um famoso explorador do século 19, apelidou o nome para esta área como a Avenida dos Vulcões, que é talvez a melhor descrição de uma das porções mais impressionantes da extensa Cordilheira dos Andes. Além das vistas incríveis, essas montanhas abrigam ricas culturas, história e tradições diferentes de qualquer outra no mundo. Descubra a forma perfeitamente coned de Cotopaxi e as encantadoras águas azul-turquesa e impressionantes paredes de crateras da Lagoa Quilotoa, tudo enquanto aproveita o tempo para aprender mais sobre as paisagens únicas de paramo e as encantadoras pessoas locais que têm chamado essas terras de lar por séculos.
+          Originally published by Columbus Travel, generated on the following link: https://www.columbusecuador.com/our-destination/2-days-cotopaxi-quilotoa-loop/
+          This content is copyright and may not be republished. Please contact us if you need more information about our products. ColumbusEcuador.com          
+          "/> */}
+        </div>
+        {/* <div className="grid gap-2 grid-flow-col">
+          <Post className="col-span-4" urli='https://images.pexels.com/photos/6134432/pexels-photo-6134432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' titulo="Trilha Condoriri e Tuni" texto="
+          A Trilha Condoriri e Tuni é uma das rotas de trekking mais impressionantes na Cordilheira Real da Bolívia. Este percurso oferece vistas deslumbrantes dos Andes bolivianos, incluindo montanhas nevadas, lagos alpinos e paisagens naturais intocadas.
+          "/>
+          <Post className="col-span-8" urli='https://images.pexels.com/photos/7343379/pexels-photo-7343379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' titulo="Rainbow Mountain Vinicunca" texto="
+            Rainbow Mountain tornou-se um destino turístico popular nos últimos anos, atraindo visitantes de todo o mundo. A caminhada até a montanha é desafiadora devido à alta altitude, mas oferece vistas deslumbrantes da paisagem andina circundante. A maioria das caminhadas começa no início da manhã de Cusco, envolvendo algumas horas de carro seguidas por várias horas de caminhada.          
+          "/>
+        </div>
+        <div className="grid gap-2 grid-flow-col">
+          <Post className="col-span-4" urli='https://images.pexels.com/photos/14984157/pexels-photo-14984157/free-photo-of-panorama-vista-paisagem-homem.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' titulo="Viaduto Glenfinnan" texto="
+          Devido à sua aparição nos filmes, o viaduto se tornou um ponto turístico popular. Muitos visitantes vão até lá para ver o Jacobite Steam Train, um trem a vapor que atravessa o viaduto e oferece uma experiência nostálgica aos passageiros.          
+          "/>
+          <Post className="col-span-8" urli='https://images.pexels.com/photos/667236/pexels-photo-667236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' titulo="KILIMANJARO: A ROTA MACHAME EM 7 DIAS" texto="
+            A Rota Machame geralmente é completada em 6-7 dias, oferecendo uma jornada mais gradual de aclimatação que melhora as chances de sucesso na subida. A trilha começa na floresta tropical e gradualmente sobe por uma variedade de paisagens, incluindo savana alpina e pedregosa, antes de atingir o cume.
+            "/>
+        </div> */}
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
+   </> 
   );
 }
